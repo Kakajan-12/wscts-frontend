@@ -1,0 +1,104 @@
+{
+  "Sidebar": {
+    "company-name": "State Committee of Turkmenistan for Water Management",
+    "dashboard": "Dashboard",
+    "monitoring": "Monitoring",
+    "tracking": "Tracking",
+    "geofence": "Geofence",
+    "report": "Report",
+    "car-park": "Vehicle fleet",
+    "settings": "Settings"
+  },
+  "About": {
+    "about-main-text": "We are a travel agency dedicated to making your journeys simple, comfortable, and unforgettable. Our goal is to take care of every detail of your trip so you can focus on what truly matters — discovering new places and enjoying the experience.\nWe offer a full range of travel services, including flight bookings, hotel reservations, visa assistance, and carefully selected tours.",
+    "up-text": "An eye for the out of the ordinary",
+    "up-title": "More Than a Destination - A Deeper Journey",
+    "down-text": "We are a dedicated travel agency passionate about creating unforgettable journeys and meaningful travel experiences. With a deep understanding of destinations around the world, we specialize in tailor-made trips that reflect our clients’ interests, lifestyles, and dreams. Our team of experienced travel professionals carefully plans every detail — from flights and accommodations to unique excursions and local experiences. Whether you are looking for a relaxing beach holiday, a cultural adventure, a luxury getaway, or a family-friendly trip, we are here to make your travel seamless and inspiring.",
+    "title": "Your Trusted Travel Partner",
+    "text": "We provide reliable, personalized travel solutions designed around your needs. With attention to detail and a passion for travel, we guide you every step of the way — from planning to unforgettable experiences. Our goal is to make every journey smooth, inspiring, and truly memorable."
+  },
+  "Gallery": {
+    "gallery-title": "Moments Worth Remembering",
+    "gallery-text": "Explore our gallery and get a glimpse of the unforgettable experiences we offer. From stunning landscapes to cultural adventures, see the journeys that await you and imagine yourself in the heart of every destination."
+  },
+  "Tour": {
+    "main-title": "EXPLORE OUR TOURS",
+    "main-text": "Your next adventure awaits! Browse our exclusive tours and find the perfect getaway tailored just for you."
+  },
+  "Services": {
+    "title": "Our Services",
+    "text": "We provide comprehensive travel services to make your journey to Turkmenistan seamless and memorable",
+    "flight-title": "FLight",
+    "flight-text": "Book affordable flights to Turkmenistan with major airlines. We offer competitive prices and flexible dates.",
+    "flight-main-title": "Flight Booking Made Easy",
+    "flight-main-text": "At our travel agency, we offer a full spectrum of flight services designed to meet the needs of every traveler. Whether you’re planning a short business trip, a romantic getaway, or an adventurous vacation, we ensure that you have access to the best flights available. From budget-friendly options to premium services, we cater to every type of traveler. Our team works with top global airlines to provide a wide selection of flights, including direct routes, connecting flights, and multi-destination options. We offer flights to major cities around the world, as well as more remote locations, giving you flexibility and choice when it comes to your travel plans. We understand that booking a flight can be a complex task, especially with fluctuating prices and varying schedules. That’s why our travel experts are here to assist you every step of the way. We’ll help you find the most convenient flight times, the best prices, and any additional services you might need, such as seat upgrades or extra luggage allowances. Additionally, our agency is committed to offering flexible booking options, ensuring peace of mind in case of changes to your travel plans. We also provide comprehensive support for any issues that may arise before, during, or after your flight, ensuring that your experience is smooth and stress-free.",
+    "hotel-title": "Hotels",
+    "hotel-text": "Choose from a wide range of hotels in Ashgabat and other cities. From luxury to budget-friendly options.",
+    "hotel-main-title": "Handpicked Hotels for Every Journey",
+    "hotel-main-text": "Discover a world of comfort, style, and unforgettable experiences with our carefully selected hotels around the globe. From luxury resorts and boutique hotels to family-friendly stays and budget-smart options, we help you find the perfect accommodation for every type of trip.",
+    "visa-title": "Visa",
+    "visa-text": "Hassle-free visa assistance for Turkmenistan. We'll guide you through the application process.",
+    "visa-main-title": "How to Obtain Your Visa",
+    "visa-main-text": "Obtaining a visa doesn’t have to be complicated. On this page, you’ll find clear guidance on how to apply for a visa and what steps are required to prepare your application correctly."
+  },
+  "Footer": {
+    "text": "Leave your mark in a country where every stone is a story, every dune an adventure, every day a discovery.",
+    "contacts": "Contacts",
+    "quick-links": "Quick links",
+    "all-right-reserved": "All rights reserved"
+  },
+  "WorkingHours": {
+    "title": "Working Hours",
+    "working": "Working",
+    "notWorking": "Not working",
+    "newYear": "New Year",
+    "womensDay": "International Women's Day",
+    "novruz": "Novruz Holiday",
+    "constitutionDay": "Constitution and State Flag Day of Turkmenistan",
+    "independenceDay": "Independence Day of Turkmenistan",
+    "neutralityDay": "Day of Neutrality"
+  },
+  "Weather": {
+    "title": "Weather in Ashgabat",
+    "temperature": "Temperature",
+    "description": "Description",
+    "sunny": "Sunny",
+    "fetchError": "Failed to load weather data",
+    "unavailable": "Weather data unavailable"
+  },
+  "Tours": {
+    "tours-title": "Our best tours",
+    "tours-text": "Discover carefully curated journeys to the most picturesque corners of the world. Ancient cities, natural wonders, and unique cultural itineraries—each tour is designed to provide you with an unforgettable experience, accompanied by experienced guides.",
+    "tours-price": "per person",
+    "tours-booking": "Booking tour",
+    "tours-route": "Route tour",
+    "tours-include": "Includes",
+    "include": "Include",
+    "exclude": "Exclude",
+    "gallery": "Gallery",
+    "view": "View tour"
+  },
+  "Contacts": {
+    "sub-title": "CONTACT",
+    "title": "Get In Touch With Us",
+    "text": "We are here to help! If you have any questions or feedback, feel free to reach out to us.",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "number": "Number",
+    "message": "Message",
+    "send": "Send message",
+    "address": "Address"
+  },
+  "Pagination": {
+    "next": "Next",
+    "prev": "Prev"
+  },
+  "More": {
+    "read-more": "Read more",
+    "view": "View"
+  },
+  "Search": {
+    "search": "Search"
+  }
+}
