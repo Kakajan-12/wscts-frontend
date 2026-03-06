@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                     <div className="flex-1 ml-64 flex flex-col">
                         <Panel />
                         <main
-                            className="bg-gray-50 overflow-auto p-6"
+                            className="bg-gray-50 overflow-auto"
                             style={{ height: 'calc(100vh - 64px)' }}
                         >
                             {children}

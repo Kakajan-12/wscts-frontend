@@ -8,13 +8,12 @@ export async function GET() {
     }
 
     const backendUrl = process.env.BACKEND_API_URL;
-    const res = await fetch(`${backendUrl}/api/v1/vehicles`, {
+    const res = await fetch(`${backendUrl}/api/v1/users/me`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
     });
 
     const data = await res.json();
-    console.log('Backend /vehicles response:', data); // Добавьте лог
     return NextResponse.json(data, { status: res.status });
 }

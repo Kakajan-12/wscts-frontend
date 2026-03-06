@@ -28,7 +28,7 @@ export default function Sidebar() {
         { href: "/tracking", label: t("tracking"), icon: MdOutlineGpsFixed },
         { href: "/geofence", label: t("geofence"), icon: FaEarthAsia },
         { href: "/report", label: t("report"), icon: TbReportAnalytics },
-        { href: "/cars", label: t("car-park"), icon: IoCarSportSharp },
+        { href: "/vehicles", label: t("car-park"), icon: IoCarSportSharp },
         { href: "/settings", label: t("settings"), icon: IoSettingsSharp }
     ];
 

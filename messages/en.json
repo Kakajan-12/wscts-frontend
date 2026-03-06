@@ -12,8 +12,14 @@
   "Dashboard": {
     "gps-status": "Connection status",
     "online-data":"Online data",
-    "top-fuel-consumption":"Top objects by fuel consumption"
-    },
+    "connected": "Connected",
+    "top-fuel-consumption":"Top objects by fuel consumption",
+    "top-mileage": "Top objects by mileage",
+    "litre": "L",
+    "km": "km",
+    "fuel-level": "Spent according to fuel level sensor"
+
+  },
   "Gallery": {
     "gallery-title": "Moments Worth Remembering",
     "gallery-text": "Explore our gallery and get a glimpse of the unforgettable experiences we offer. From stunning landscapes to cultural adventures, see the journeys that await you and imagine yourself in the heart of every destination."

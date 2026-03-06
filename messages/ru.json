@@ -12,7 +12,13 @@
   "Dashboard": {
     "gps-status": "Состояние соединения",
     "online-data":"Онлайн-данные",
-    "top-fuel-consumption":"Топ объектов по расходу топлива"
+    "connected": "Подключены",
+    "top-fuel-consumption":"Топ объектов по расходу топлива",
+    "top-mileage": "Топ объектов по пробегу",
+    "litre": "Л",
+    "km": "км",
+    "fuel-level": "Потрачено по ДУТ"
+
   },
   "Gallery": {
     "gallery-title": "Моменты, которые стоит запомнить",

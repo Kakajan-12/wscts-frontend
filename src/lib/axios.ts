@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { redirect } from 'next/navigation';
 
 const api = axios.create({
   baseURL: '/api', // все запросы будут идти на /api/...

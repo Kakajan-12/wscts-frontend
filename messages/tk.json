@@ -12,8 +12,13 @@
   "Dashboard": {
     "gps-status": "Baglanyşyk ýagdaýy",
     "online-data":"Onlaýn maglumatlar",
-    "top-fuel-consumption":"Ýangyç sarp edilişi boýunça obýektler"
-    },
+    "connected": "Baglananlar",
+    "top-fuel-consumption":"Ýangyç sarp edilişi boýunça obýektler",
+    "top-mileage": "Kilometr boýunça obýektler",
+    "litre": "L",
+    "km": "km",
+    "fuel-level": "Ýangyç derejesindäki datçige görä sarp edildi"
+  },
   "Gallery": {
     "gallery-title": "Ýatda galmaga mynasyp pursatlar",
     "gallery-text": "Galereýamyzy öwreniň we hödürleýän ýatdan çykmajak tejribelerimize göz aýlaň. Ajaýyp peýzažlardan medeni başdan geçirmelere çenli, sizi garaşýan syýahatlara göz aýlaň we özüňizi her bir ýeriň merkezinde göz öňüne getiriň."
