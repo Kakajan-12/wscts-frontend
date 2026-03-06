@@ -9,14 +9,11 @@
     "car-park": "Vehicle fleet",
     "settings": "Settings"
   },
-  "About": {
-    "about-main-text": "We are a travel agency dedicated to making your journeys simple, comfortable, and unforgettable. Our goal is to take care of every detail of your trip so you can focus on what truly matters — discovering new places and enjoying the experience.\nWe offer a full range of travel services, including flight bookings, hotel reservations, visa assistance, and carefully selected tours.",
-    "up-text": "An eye for the out of the ordinary",
-    "up-title": "More Than a Destination - A Deeper Journey",
-    "down-text": "We are a dedicated travel agency passionate about creating unforgettable journeys and meaningful travel experiences. With a deep understanding of destinations around the world, we specialize in tailor-made trips that reflect our clients’ interests, lifestyles, and dreams. Our team of experienced travel professionals carefully plans every detail — from flights and accommodations to unique excursions and local experiences. Whether you are looking for a relaxing beach holiday, a cultural adventure, a luxury getaway, or a family-friendly trip, we are here to make your travel seamless and inspiring.",
-    "title": "Your Trusted Travel Partner",
-    "text": "We provide reliable, personalized travel solutions designed around your needs. With attention to detail and a passion for travel, we guide you every step of the way — from planning to unforgettable experiences. Our goal is to make every journey smooth, inspiring, and truly memorable."
-  },
+  "Dashboard": {
+    "gps-status": "Connection status",
+    "online-data":"Online data",
+    "top-fuel-consumption":"Top objects by fuel consumption"
+    },
   "Gallery": {
     "gallery-title": "Moments Worth Remembering",
     "gallery-text": "Explore our gallery and get a glimpse of the unforgettable experiences we offer. From stunning landscapes to cultural adventures, see the journeys that await you and imagine yourself in the heart of every destination."

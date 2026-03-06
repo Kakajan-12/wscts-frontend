@@ -9,14 +9,11 @@
     "car-park": "Awto park",
     "settings": "Sazlamalar"
   },
-  "About": {
-    "about-main-text": "Biz syýahatlaryňyzy ýönekeý, rahat we ýatdan çykmajak etmäge bagyşlanan syýahatçylyk agentligi. Maksadymyz syýahatyňyzyň her bir jikme-jikligine üns bermekdir, şonuň üçin siz hakykatdanam möhüm zatlara - täze ýerleri açmaga we tejribeden lezzet almaga üns berip bilersiňiz.\n\nBiz syýahat hyzmatlarynyň doly toplumyny hödürleýäris, şol sanda uçar biletlerini bronlamak, myhmanhana bronlamak, wiza kömegi we üns bilen saýlanan syýahatlar.",
-    "up-text": "Adaty bolmadyk zatlary duýmak ukyby",
-    "up-title": "Diňe bir menzil däl - has çuňňur syýahat.",
-    "down-text": "Biz ýatdan çykmajak syýahatlary we manyly syýahat tejribelerini döretmäge bagyşlanan syýahatçylyk agentligi. Dünýäniň dürli künjeklerindäki ýerleri çuňňur düşünmek bilen, müşderilerimiziň gyzyklanmalaryny, durmuş ýörelgelerini we arzuwlaryny görkezýän ýöriteleşdirilen syýahatlara ýöriteleşýäris. Tejribeli syýahat hünärmenlerinden ybarat toparymyz uçuşlardan we ýerleşýän ýerlerden başlap, özboluşly gezelençlere we medeni tejribelere çenli her bir jikme-jikligi jikme-jik meýilleşdirýär. Siz dynç alyş üçin deňiz kenarynda dynç almagy, medeni başdan geçirmeleri, kaşaň dynç alyş ýerini ýa-da maşgala dynç alyşyny gözleýän bolsaňyz, biz syýahatyňyzy kemsiz we ylham beriji etmek üçin şu ýerde.",
-    "title": "Syýahatçylykda ygtybarly hyzmatdaşyňyz",
-    "text": "Biz siziň zerurlyklaryňyza laýyk gelýän ygtybarly, şahsylaşdyrylan syýahat çözgütlerini hödürleýäris. Jikme-jikliklere üns bermek we syýahata bolan höwes bilen, meýilnamalaşdyrmakdan başlap, ýatdan çykmajak tejribeleri döretmäge çenli her ädimde size ýoldaşlyk edýäris. Maksadymyz her syýahaty rahat, ylham beriji we hakykatdanam ýatda galyjy etmekdir."
-  },
+  "Dashboard": {
+    "gps-status": "Baglanyşyk ýagdaýy",
+    "online-data":"Onlaýn maglumatlar",
+    "top-fuel-consumption":"Ýangyç sarp edilişi boýunça obýektler"
+    },
   "Gallery": {
     "gallery-title": "Ýatda galmaga mynasyp pursatlar",
     "gallery-text": "Galereýamyzy öwreniň we hödürleýän ýatdan çykmajak tejribelerimize göz aýlaň. Ajaýyp peýzažlardan medeni başdan geçirmelere çenli, sizi garaşýan syýahatlara göz aýlaň we özüňizi her bir ýeriň merkezinde göz öňüne getiriň."

@@ -93,7 +93,6 @@ export default function OnlineCard({
     return (
         <div className="bg-white rounded-xl shadow flex flex-col">
 
-            {/* header */}
             <div className="flex items-center justify-between bg-[#065F46] rounded-t-xl px-4 py-1">
                 <h3 className="text-lg font-semibold text-white">
                     {t('gps-status')}
@@ -104,7 +103,6 @@ export default function OnlineCard({
                 </p>
             </div>
 
-            {/* single circle */}
             <div className="flex-1 flex items-center justify-center py-6">
 
                 <CircleDiagram

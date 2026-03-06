@@ -15,6 +15,7 @@ import OnlineCard from './OnlineCard/OnlineCard';
 import TopFuel from './TopFuel/TopFuel';
 import TopMileage from './TopMileage/TopMileage';
 import FuelChart from './FuelChart/FuelChart';
+import api from '@/lib/axios';
 
 ChartJS.register(
     LineElement,
@@ -30,22 +31,21 @@ export default function DashboardStats() {
     const [onlineCount, setOnlineCount] = useState<number>(0);
     const lastSeen = useRef<Record<string, number>>({});
 
-    // Загрузка списка машин через наше API
     useEffect(() => {
-        async function loadVehicles() {
-            try {
-                const res = await fetch('/api/vehicles');
-                const vehicles = await res.json();
-                setTotalVehicles(vehicles.length);
-            } catch (e) {
-                console.error('vehicles error', e);
-            }
+    async function loadVehicles() {
+        try {
+            const res = await api.get('/vehicles');
+const vehicles = Array.isArray(res.data) ? res.data : (res.data.data || []);
+setTotalVehicles(vehicles.length);
+            setTotalVehicles(vehicles.length);
+        } catch (e) {
+            console.error('vehicles error', e);
         }
+    }
 
-        loadVehicles();
-    }, []);
+    loadVehicles();
+}, []);
 
-    // WebSocket для realtime
     useEffect(() => {
         const ws = new WebSocket(process.env.NEXT_PUBLIC_WS_URL!);
 
@@ -70,19 +70,16 @@ export default function DashboardStats() {
         };
     }, []);
 
-    // Загрузка статистики (если нужна)
     useEffect(() => {
-        async function loadStats() {
-            try {
-                await fetch('/api/dashboard/stats');
-                // можно обработать данные, если нужно
-            } catch (e) {
-                console.error('stats error', e);
-            }
-        }
-
-        loadStats();
-    }, []);
+  async function loadStats() {
+    try {
+      await api.get('/dashboard/stats');
+    } catch (e) {
+      console.error('stats error', e);
+    }
+  }
+  loadStats();
+}, []);
 
     const offlineCount = Math.max(totalVehicles - onlineCount, 0);
 

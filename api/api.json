@@ -1,0 +1,894 @@
+{
+  "info": {
+    "_postman_id": "46e8110c-31ed-44b3-a7e6-f596b72d1d0b",
+    "name": "LogTech",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17286989"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/me",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "// {\n//   \"name\": \"string\",\n//   \"surname\": \"string\",\n//   \"fathername\": \"string\", // nullable\n//   \"email\": \"string@test.com\",\n//   \"workEmail\": \"string@test.com\",\n//   \"workPhone\": \"string\",\n//   \"position\": \"string\",\n//   \"department\": \"string\",\n//   \"roleId\": 1, // number\n//   \"depotId\": 1, // number, nullable\n//   \"passportNumber\": \"string\" // nullable\n// }\n\n{\n    \"phone\": \"+99364572209\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"phone\": \"+1234567890\",\n    \"password\": \"testAdmin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/logout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"TestAdmin\",\n    \"surname\": \"test\",\n    \"phone\": \"+1234567890\",\n    \"password\": \"testAdmin\",\n    \"email\": \"admin@test.com\",\n    \"roleId\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create role",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Client\",\n  \"description\": \"Read-only access to vehicles and GPS locations for testing\",\n  \"permissions\": [\n    \"vehicles.read\",\n    \"vehicles.list\",\n    \"gps_locations.read\",\n    \"gps_locations.list\",\n    \"dashboard.view\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/roles",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "depot",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/depots",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "depots"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Nedir Gala\",\n  \"code\": \"MD003\",\n  \"phone\": \"+1234567890\",\n  \"email\": \"admin@nedir-gala.com\",\n  \"type\": \"LOCAL\",\n  \"address\": {\n    \"city\": \"Ashgabat\",\n    \"latitude\": 40.7128,\n    \"longitude\": -74.0060,\n    \"regionId\": 1,\n    \"postalCode\": \"744000\",\n    \"country\": \"Turkmenistan\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/depots",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "depots"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Depot\",\n  \"address\": {\n    \"city\": \"Tejen\",\n    \"latitude\": 42.3601,\n    \"longitude\": -71.0589\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/depots/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "depots",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "region",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/regions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "regions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Ashgabat\",\n    \"code\": \"AG\",\n    \"active\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/regions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "regions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/addresses",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "addresses"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "vehicle",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/vehicles",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "vehicles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"model\": \"XE36SR\",\n    \"engineNumber\": \"RU-2024-002\",\n    \"plateNumber\": \"AG-002\",\n    \"registrationNumber\": \"REGI-002\",\n    \"depotId\": 1,\n    \"make\": \"JCB\",\n    \"year\": 2023,\n    \"color\": \"Yellow\",\n    \"capacity\": 12.5,\n    \"capacityUnit\": \"m3\",\n    \"registrationDate\": \"2023-01-01\",\n    \"registrationExpiry\": \"2026-01-01\",\n    \"insuranceExpiry\": \"2025-12-31\",\n    \"status\": \"AVAILABLE\",\n    \"notes\": \"Main water supply vehicle\",\n    \"trackerDevice\": {\n        \"imei\": \"123456789012345\",\n        \"manufacturer\": \"Teltonika\",\n        \"model\": \"FMC650\",\n        \"simNumber\": \"99361111111\",\n        \"status\": \"ACTIVE\",\n        \"notes\": \"Installed on Hyundai i30 Kuwwat\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/vehicles",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "vehicles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"make\": \"Hyundai\", // required if provided\n    \"model\": \"i30\", // required if provided\n    \"engineNumber\": \"hyundai30-engine-number\", // required if provided\n    \"plateNumber\": \"hyundai30-plate-number\",\n    \"registrationNumber\": \"hyundai30-registration-number\", // required if provided\n    \"licensePlate\": \"hyundai30-license-number\",\n    \"color\": \"string\",\n    \"capacity\": 5000, // number\n    \"capacityUnit\": \"string\",\n    \"year\": 2024, // number\n    \"registrationDate\": \"2024-01-01\", // ISO date string\n    \"registrationExpiry\": \"2025-01-01\", // ISO date string\n    \"insuranceExpiry\": \"2025-06-01\", // ISO date string\n    \"depotId\": 1, // positive number\n    \"status\": \"AVAILABLE\", // AVAILABLE | IN_USE | UNDER_MAINTENANCE | OUT_OF_SERVICE\n    \"maintenanceType\": \"ROUTINE_SERVICE\", // ROUTINE_SERVICE | OIL_CHANGE | TIRE_REPLACEMENT | BRAKE_SERVICE | ENGINE_REPAIR | TANK_CLEANING | INSPECTION | EMERGENCY_REPAIR | OTHER\n    \"maintenanceDescription\": \"string\",\n    \"lastMaintenanceDate\": \"2024-11-01\", // ISO date string\n    \"nextMaintenanceDate\": \"2025-02-01\", // ISO date string\n    \"maintenanceCompletedDate\": \"2024-11-05\", // ISO date string\n    \"maintenanceServiceProvider\": \"string\",\n    \"notes\": \"string\",\n    \"active\": true // boolean\n    // \"trackerDeviceId\": 1, // positive number (required if trackerDevice is provided)\n    // \"trackerDevice\": {\n    //     \"imei\": \"864636068530621\",\n    //     \"manufacturer\": \"Teltonika\",\n    //     \"model\": \"FMC650\",\n    //     \"simNumber\": \"99361111111\",\n    //     \"status\": \"ACTIVE\", // ACTIVE | INACTIVE | FAULTY | INSTALLATION_PENDING | UNASSIGNED\n    //     \"notes\": \"string\"\n    // }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/vehicles/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "vehicles",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "tracker-device",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/trackers?registered=false",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "trackers"
+              ],
+              "query": [
+                {
+                  "key": "registered",
+                  "value": "false"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"imei\": \"864636068530621\",\n    \"manufacturer\": \"Teltonika\",\n    \"model\": \"FMC650\",\n    \"simNumber\": \"99361111111\",\n    \"status\": \"ACTIVE\",\n    \"notes\": \"Installed on Hyundai i30 Kuwwat\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/trackers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "trackers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"status\": \"ACTIVE\"\n    // \"notes\": \"Under maintenance\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/trackers/4",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "trackers",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/trackers/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "trackers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "assign",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"vehicleId\": 1,\n    \"trackerId\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/trackers/assign",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "trackers",
+                "assign"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "unassign",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"vehicleId\": 1,\n    \"trackerId\": 4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/trackers/unassign",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "trackers",
+                "unassign"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "gps-locations",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/gps-locations",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "gps-locations"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "workzone",
+      "item": [
+        {
+          "name": "index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/workzones?status=ACTIVE&depotId=2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "workzones"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "ACTIVE"
+                },
+                {
+                  "key": "depotId",
+                  "value": "2"
+                }
+              ]
+            },
+            "description": "Work zone type = \"POLYGON\" | \"POLYLINE\" | \"RECTANGLE\" | \"CIRCLE\"\n\nStatus = \"ACTIVE\" | \"INACTIVE\" | \"ARCHIVED\";"
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Obiznoy Work Zone\",\n    \"type\": \"POLYGON\",\n    \"geometry\": {\n        \"type\": \"Polygon\",\n        \"coordinates\": [\n            [\n                [\n                    37.975580,\n                    58.393737\n                ],\n                [\n                    37.983066,\n                    58.403507\n                ],\n                [\n                    37.957106,\n                    58.441084\n                ],\n                [\n                    37.950479,\n                    58.433568\n                ]\n            ]\n        ]\n    },\n    \"depotIds\": [\n        2\n    ],\n    \"status\": \"ACTIVE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/workzones",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "workzones"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "assign shift",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vehicleId\": 1,\n  \"workZoneId\": 1,\n  \"shiftDate\": \"2025-12-18T00:00:00Z\"\n//   \"shiftStart\": \"2024-01-20T08:00:00Z\",\n//   \"shiftEnd\": \"2024-01-20T17:00:00Z\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/workzones/assignments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "workzones",
+                "assignments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get shift assignments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/workzones/:id/assignments?activeOnly=true",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "workzones",
+                ":id",
+                "assignments"
+              ],
+              "query": [
+                {
+                  "key": "date",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "activeOnly",
+                  "value": "true"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "health",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"model\": \"SE36SR\",\n    \"engineNumber\": \"EN-2024-001\",\n    \"plateNumber\": \"ASH-001\",\n    \"registrationNumber\": \"REG-001\",\n    \"depotId\": 1,\n    \"make\": \"Shantui\",\n    \"year\": 2023,\n    \"color\": \"Yellow\",\n    \"capacity\": 12.5,\n    \"capacityUnit\": \"m3\",\n    \"registrationDate\": \"2023-01-01\",\n    \"registrationExpiry\": \"2026-01-01\",\n    \"insuranceExpiry\": \"2025-12-31\",\n    \"status\": \"AVAILABLE\",\n    \"notes\": \"Main water supply vehicle\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "dashboard",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/dashboard/stats",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "dashboard",
+            "stats"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGVJZCI6MiwiZGVwb3RJZCI6bnVsbCwicGhvbmUiOiIrMTIzNDU2Nzg5MCIsImlhdCI6MTc3MTU4NjA2NCwiZXhwIjoxNzcyMTkwODY0fQ.4HlQO_taRxdJeEKfKV66Neo2LEqM72TLPA43QsStZCI",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "",
+      "disabled": true
+    },
+    {
+      "key": "baseUrl",
+      "value": ""
+    },
+    {
+      "key": "baseUrl",
+      "value": "",
+      "disabled": true
+    }
+  ]
+}
