@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Vehicle, TrackerDevice } from '@/types/vehicle';
 import { vehiclesApi } from '@/lib/api/vehicles';
 import { trackersApi } from '@/lib/api/trackers';
+import {Link} from "@/i18n/navigation";
 
 export default function VehiclesPage() {
     const [vehicles, setVehicles] = useState<Vehicle[]>([]);
@@ -41,13 +42,11 @@ export default function VehiclesPage() {
                 >
                     Add vehicle
                 </button>
-                <button
+                <Link href="/trackers/unregistered"
                     className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-                    onClick={handleShowUnregistered}
-                    disabled={loadingTrackers}
                 >
-                    {loadingTrackers ? 'Loading...' : 'Show unregistered IMEIs'}
-                </button>
+                    Unregistered Trackers
+                </Link>
             </div>
 
             {showUnregistered && (

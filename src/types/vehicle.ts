@@ -8,10 +8,14 @@ export interface TrackerDevice {
     status: 'ACTIVE' | 'INACTIVE' | 'FAULTY';
     notes: string | null;
     isConnected: boolean;
-    lastConnectedTime: string | null; // ISO date
+    lastConnectedTime: string | null;
     lastDisconnectedTime: string | null;
     createdAt: string;
     updatedAt: string;
+    lastLatitude: number | null;
+    lastLongitude: number | null;
+    firstSeenAt: string;
+    lastSeenAt: string;
 }
 
 export interface Depot {
@@ -47,6 +51,13 @@ export interface Vehicle {
     notes: string | null;
     defaultTrackerDevice: TrackerDevice | null;
     depot: Depot;
+}
+
+// Add this alongside existing types
+export interface CreateVehicleResponse {
+    success: boolean;
+    data: Vehicle;
+    message?: string;
 }
 
 export type ApiResponse<T> = T[] | { data: T[]; count?: number; success?: boolean };

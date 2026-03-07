@@ -7,16 +7,12 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const searchParams = request.nextUrl.searchParams;
-    const registered = searchParams.get('registered'); // может быть 'false' или 'true'
-
     const backendUrl = process.env.BACKEND_API_URL;
-    let url = `${backendUrl}/api/v1/trackers`;
-    if (registered !== null) {
-        url += `?registered=${registered}`;
-    }
+    const url = new URL(request.url);
+    const query = url.searchParams.toString();
+    const fetchUrl = `${backendUrl}/api/v1/trackers${query ? '?' + query : ''}`;
 
-    const res = await fetch(url, {
+    const res = await fetch(fetchUrl, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
